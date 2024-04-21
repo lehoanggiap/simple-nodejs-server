@@ -1,7 +1,13 @@
-var http = require('http');
-http.createServer(function (req, res) {
-  console.log("Ip address", req.socket.remoteAddress)
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('Hello World\n');
-}).listen(8080);
-console.log('Server running');
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  const clientIP = req.ip;
+  console.log(`Client IP: ${clientIP}`);
+  res.send('IP logged successfully!');
+});
+
+const port = 8080;
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
