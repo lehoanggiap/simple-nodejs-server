@@ -8,7 +8,8 @@
       "test": "echo \"Error: no test specified\" && exit 1"
     },
     "dependencies": {
-      "express": "4.19.2"
+      "express": "4.19.2",
+      "proxy-addr": "2.0.7"
     },
     "author": "Aline Bastos",
     "license": "ISC"
