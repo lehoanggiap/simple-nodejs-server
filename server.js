@@ -6,7 +6,7 @@ app.set('trust proxy', true);
 
 app.get('/', (req, res) => {
   const clientIP = proxy(req, 'loopback');
-  console.log(`Client IP: ${clientIP}`);
+  console.log(`Client IP: ${req.ip}`);
   res.send('IP logged successfully!');
 });
 
